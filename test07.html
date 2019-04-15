@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color: aquamarine;
+        }
+        .error{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <a :href="url">链接</a>
+    <img :src="imgUrl" alt="" v-bind:width="width">
+    <hr>
+    <!--给v-bind:class设置一个对象，可以动态的切换class-->
+    <div :class="[isActive ? activeCls : errorCls]">isActive</div>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            url: 'https://www.github.com',
+            imgUrl: 'images/avatar.jpg',
+            width: '100px',
+            isActive: false,
+            activeCls: 'active',
+            errorCls: 'error'
+        }
+    })
+</script>
+</body>
+</html>

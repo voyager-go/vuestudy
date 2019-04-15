@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{prices}}
+</div>
+<script src="vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            package1: [
+                {
+                    name: 'iPhone 7',
+                    price: 7199,
+                    count: 2
+                },
+                {
+                    name: 'iPad',
+                    price: 8888,
+                    count: 5
+                }
+            ],
+            package2: [
+                {
+                    name: 'apple',
+                    price: 3,
+                    count: 5
+                },
+                {
+                    name: 'banana',
+                    price: 2,
+                    count: 10
+                }
+            ],
+        },
+        computed: {
+            prices: function () {
+                let prices = 0;
+                for (let i = 0; i < this.package1.length; i++){
+                    prices += this.package1[i].price * this.package1[i].count;
+                }
+                for (let j = 0; j < this.package2.length; j++){
+                    prices += this.package2[j].price * this.package2[j].count;
+                }
+                return prices;
+            }
+        }
+    });
+</script>
+</body>
+</html>

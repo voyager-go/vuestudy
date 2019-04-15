@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <a v-bind:href="url">link</a>
+    <img v-bind:src="imgUrl">
+    <br>
+    <p v-if="show">Hello World</p>
+    <button v-on:click="handleClose">click hidden</button>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            url: 'www.baidu.com',
+            imgUrl: 'xxxxxx',
+            show: true
+        },
+        methods: {
+            handleClose: function () {
+                this.close()
+            },
+            close: function () {
+                if (this.show){
+                    this.show = false;
+                } else {
+                    this.show = true;
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
