@@ -14,7 +14,26 @@
 </head>
 <body>
 <div id="app">
-    <p v-for="book in books">{{book.name}}</p>
+    <ol>
+        <li v-for="book in books">{{book.name}}</li>
+    </ol>
+    <p>v-for的表达式支持一个可选参数作为当前项的索引</p>
+    <ul>
+        <li v-for="(book, index) in books">{{index}}--{{book.name}}</li>
+    </ul>
+    <p>与v-if一样 v-for也可以作用在template标签上</p>
+    <ul>
+        <template v-for="book in books">
+            <li>书名：{{book.name}}</li>
+            <li>作者：{{book.author}}</li>
+        </template>
+    </ul>
+    <p>除了数组外，对象的属性也是可以遍历的</p>
+    <span v-for="val in user">{{val}}</span>
+    <p>遍历对象属性时，有两个可选参数，键名和索引</p>
+    <span v-for="(val,key,index) in user">{{index}}--{{key}}--{{val}}===</span>
+    <p>v-for可以迭代整数</p>
+    <span v-for="n in 10">{{n}}  --  </span>
 </div>
 <script src="vue.min.js"></script>
 <script>
@@ -22,12 +41,17 @@
         el: '#app',
         data: {
             books:[
-                {name: 'vue'},
-                {name: 'php'},
-                {name: 'java'},
-                {name: 'go'},
-                {name: 'linux'},
+                {name: 'vue',author: 'aa'},
+                {name: 'php',author: 'bb'},
+                {name: 'java',author: 'cc'},
+                {name: 'go',author: 'dd'},
+                {name: 'linux',author: 'ee'},
             ],
+            user:{
+                name: 'Aresn',
+                gender: '男',
+                age: 23
+            }
         }
     })
 </script>
