@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="app">
+    <p>过滤</p>
+    <ul>
+        <template v-for="book in filterBooks">
+            <li>书名：{{book.name}}</li>
+            <li>作者：{{book.author}}</li>
+        </template>
+    </ul>
+    <p>排序</p>
+    <ul>
+        <template v-for="book in sortBooks">
+            <li>书名：{{book.name}}</li>
+            <li>作者：{{book.author}}</li>
+        </template>
+    </ul>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            books:[
+                {name: 'vue',author: 'aa'},
+                {name: 'php',author: 'bb'},
+                {name: 'java',author: 'cc'},
+                {name: 'go',author: 'dd'},
+                {name: 'linux',author: 'ee'},
+                {name: 'javascript',author: 'ff'},
+            ],
+            user:{
+                name: 'Aresn',
+                gender: '男',
+                age: 23
+            }
+        },
+        computed: {
+            _this: this,
+            filterBooks: (_this) => {
+                // 箭头函数的this指向的词法内部作用域
+                return _this.books.filter((book) => {
+                    return book.name.match(/java/);
+                });
+            },
+            // _filterBooks: function () {
+            //     return this.books.filter((book) => {
+            //         return book.name.match(/java/);
+            //     });
+            // }
+            sortBooks: (_this) => {
+                return _this.books.sort((a, b) => {
+                    return a.name.length < b.name.length
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

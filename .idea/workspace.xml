@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="801a29a1-083a-419d-ae95-03eccb426354" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test09.html" beforeDir="false" afterPath="$PROJECT_DIR$/test09.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test10.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,11 +33,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test09.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="142">
+              <caret line="25" column="23" lean-forward="true" selection-end-line="58" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test10.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="58" column="35" lean-forward="true" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -75,6 +84,7 @@
         <option value="$PROJECT_DIR$/test07.html" />
         <option value="$PROJECT_DIR$/test08.html" />
         <option value="$PROJECT_DIR$/test09.html" />
+        <option value="$PROJECT_DIR$/test10.html" />
       </list>
     </option>
   </component>
@@ -146,12 +156,12 @@
       <workItem from="1551966769896" duration="1956000" />
       <workItem from="1553841032247" duration="21000" />
       <workItem from="1555331112902" duration="3240000" />
-      <workItem from="1555502692929" duration="1802000" />
+      <workItem from="1555502692929" duration="4624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10175000" />
+    <option name="totallyTimeSpent" value="12997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="45" width="1400" height="772" extended-state="0" />
@@ -238,8 +248,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test09.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="142">
+          <caret line="25" column="23" lean-forward="true" selection-end-line="58" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="58" column="35" lean-forward="true" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
         </state>
       </provider>
     </entry>
