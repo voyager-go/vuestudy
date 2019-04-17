@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color: aquamarine;
+        }
+        .error{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p v-for="book in books">{{book.name}}</p>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            books:[
+                {name: 'vue'},
+                {name: 'php'},
+                {name: 'java'},
+                {name: 'go'},
+                {name: 'linux'},
+            ],
+        }
+    })
+</script>
+</body>
+</html>

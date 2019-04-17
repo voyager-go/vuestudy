@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active{
+            color: aquamarine;
+        }
+        .error{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p v-if="status === 1">(v-if)当status等于1时显示这一行</p>
+    <p v-else-if="status === 2">当status等于2时显示这一行</p>
+    <p v-else>否则显示这一行</p>
+
+    <p v-show="status === 1">(v-show)当status为1时 显示</p>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            status: 1
+        }
+    })
+</script>
+</body>
+</html>
