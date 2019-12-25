@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+        .hasColor{
+            color: orangered;
+        }
+        .noColor{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    <ul>
+        <li v-for="(m, index) in movies" @click="changeColor(index)" :class="{hasColor:index === currentIndex}">{{m}}</li>
+    </ul>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data:{
+            movies:['绿皮书', '奥特曼', '猫和老鼠', '倚天屠龙记', '华农兄弟'],
+            currentIndex: -1,
+        },
+        methods:{
+            changeColor: function (index) {
+                this.currentIndex = index
+            }
+        }
+    })
+</script>
+</body>
+</html>

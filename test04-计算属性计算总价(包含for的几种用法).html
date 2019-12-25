@@ -7,6 +7,10 @@
 <body>
 <div id="app">
     {{prices}}
+    <hr>
+    {{prices2}}
+    <hr>
+    {{prices3}}
 </div>
 <script src="vue.min.js"></script>
 <script>
@@ -48,6 +52,26 @@
                     prices += this.package2[j].price * this.package2[j].count;
                 }
                 return prices;
+            },
+            prices2: function () {
+                let prices = 0;
+                for (let i in this.package1){
+                    prices += this.package1[i].price * this.package1[i].count
+                }
+                for (let i in this.package2){
+                    prices += this.package2[i].price * this.package2[i].count
+                }
+                return prices
+            },
+            prices3: function () {
+                let prices = 0;
+                for (let item of this.package1){
+                    prices += item.price * item.count
+                }
+                for (let item of this.package2){
+                    prices += item.price * item.count
+                }
+                return prices
             }
         }
     });
