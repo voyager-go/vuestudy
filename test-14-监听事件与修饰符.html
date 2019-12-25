@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <div @click="divClick">
+        1233223
+<!--        加上.stop就可以实现冒泡事件 点击按钮时不会调用div上的click事件-->
+        <button @click.stop="btnClick">按钮1</button>
+    </div>
+    <form action="www.baidu.com">
+<!--        加上.prevent可以实现阻止表单提交-->
+        <input type="submit" @click.prevent="btnSub" value="提交">
+    </form>
+<!--    加上.once可以实现只点击一次-->
+    <button @click.once="btn2Click">按钮2</button>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    const vm = new Vue({
+       el: '#app',
+       data: {
+
+       } ,
+        methods:{
+            divClick(){
+                console.log('div click')
+            },
+            btnClick(){
+                console.log('btn click')
+            },
+            btnSub(){
+                console.log('submit ...')
+            },
+            btn2Click(){
+                console.log('1233');
+            }
+        }
+    });
+</script>
+</body>
+</html>
