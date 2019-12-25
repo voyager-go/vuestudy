@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <h3>{{getFullName()}}</h3>
+    <h3>{{getFullName()}}</h3>
+    <h3>{{getFullName()}}</h3>
+    <h3>{{getFullName()}}</h3>
+    <h3>{{fullName}}</h3>
+    <h3>{{fullName}}</h3>
+    <h3>{{fullName}}</h3>
+    <h3>{{fullName}}</h3>
+    <h3>{{fullName}}</h3>
+</div>
+<script src="vue.min.js"></script>
+<script>
+    // 计算属性会对相同结果进行缓存 而methods不会
+    // 这个案例中fullName只调用了一次 而getFullName调用了多次
+    const vm = new Vue({
+       el: '#app',
+       data: {
+           firstName: 'wenjie',
+           lastName : 'zhang',
+       },
+        methods:{
+           getFullName: function () {
+               console.log('调用methods');
+               return this.firstName + ' ' + this.lastName
+           }
+        },
+        // computed:{
+        //    fullName: function () {
+        //        console.log('computed');
+        //        return this.firstName + ' ' + this.lastName
+        //    }
+        // }
+        // 上面的写法是省略了set方法并简写get后的方法
+        computed: {
+           fullName:{
+               // 一般set方法不常用
+               set: function () {
+
+               },
+               get: function () {
+                   return this.firstName + ' ' + this.lastName
+               }
+           }
+        }
+    });
+</script>
+</body>
+</html>
