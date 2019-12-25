@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="801a29a1-083a-419d-ae95-03eccb426354" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test01.html" beforeDir="false" afterPath="$PROJECT_DIR$/test01-获取系统的时间.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test02.html" beforeDir="false" afterPath="$PROJECT_DIR$/test02-v-bind的使用.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test03.html" beforeDir="false" afterPath="$PROJECT_DIR$/test03-计算属性拼接字符串.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test04.html" beforeDir="false" afterPath="$PROJECT_DIR$/test04-计算属性计算总价(包含for的几种用法).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test05.html" beforeDir="false" afterPath="$PROJECT_DIR$/test05-计算属性的getter与setter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test06.html" beforeDir="false" afterPath="$PROJECT_DIR$/test06-计算属性之字符串反转.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +70,7 @@
       <workItem from="1555331112902" duration="3240000" />
       <workItem from="1555502692929" duration="4929000" />
       <workItem from="1556435537101" duration="46000" />
-      <workItem from="1577200555662" duration="2812000" />
+      <workItem from="1577200555662" duration="3538000" />
     </task>
     <servers />
   </component>
