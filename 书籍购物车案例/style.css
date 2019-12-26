@@ -1,0 +1,32 @@
+.container{
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 140px;
+    text-align: center;
+}
+button{
+    cursor: pointer;
+}
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    border-color: grey;
+}
+.vue-table{
+    width: 100%;
+    background-color: #fff;
+    color: #666;
+}
+.vue-table th, .vue-table td {
+    position: relative;
+    padding: 9px 15px;
+    min-height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6;
+    text-align: center;
+    font-weight: 400;
+}
