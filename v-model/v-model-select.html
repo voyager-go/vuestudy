@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <select name="hobby" id="" v-model="selected">
+        <option v-for="item in hobbies" :value="item">{{item}}</option>
+    </select>
+    当前选择：{{selected}}
+</div>
+<script src="../vue.min.js"></script>
+<script>
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            hobbies:['唱歌','跳舞','Rap','篮球'],
+            selected: ''
+        },
+        created(){
+            this.selected = this.hobbies[0]
+        }
+    });
+</script>
+</body>
+</html>

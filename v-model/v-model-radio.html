@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <label for="male">男</label><input id="male" type="radio" value="0" v-model="gender">
+    <label for="female">女</label><input id="female" type="radio" value="1" v-model="gender">
+    当前选择：{{gender}}
+</div>
+<script src="../vue.min.js"></script>
+<script>
+    const vm = new Vue({
+       el: '#app',
+       data: {
+           gender: 0
+       }
+    });
+</script>
+</body>
+</html>
