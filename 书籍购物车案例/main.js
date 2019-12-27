@@ -60,19 +60,18 @@ const app = new Vue({
     },
     // 计算属性处理总价
     computed:{
-        /**
-         * 计算总价
-         * @returns {number}
-         */
         booksPrice(){
-            let total = 0;
-            for (let book of this.books){
-                total += book.count * book.price;
-            }
-            return total;
+            // let total = 0;
+            // for (let book of this.books){
+            //     total += book.count * book.price;
+            // }
+            // return total;
+            // ES6 高阶函数装逼大法
+            return this.books.reduce((previousValue, book) => {
+                return previousValue + book.price * book.count
+            }, 0)
         }
     },
-    // 过滤器
     filters: {
        showPrice(price){
             return '¥ ' + price.toFixed(2);
