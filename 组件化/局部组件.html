@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <cpd></cpd>
+    <cpd></cpd>
+    <cpd></cpd>
+    <cpd></cpd>
+</div>
+<script src="../vue.min.js"></script>
+<script>
+    const componentsDom = Vue.extend({
+        template: `
+            <div>
+                <h2>I am title, too</h2>
+                <p>description</p>
+                <p>articles</p>
+            </div>
+        `
+    });
+    const vm = new Vue({
+        el: '#app',
+        data:{
+
+        },
+        components:{
+            cpd: componentsDom
+        }
+    })
+</script>
+</body>
+</html>

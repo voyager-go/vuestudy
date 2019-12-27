@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <cpd></cpd>
+    <cpd2></cpd2>
+</div>
+<script src="../vue.min.js"></script>
+<script>
+    // 语法糖1
+    Vue.component('cpd', {
+        template: `
+            <div>
+                <h2>I am title</h2>
+                <p>description</p>
+                <p>articles</p>
+            </div>
+        `
+    });
+    const vm = new Vue({
+        el: '#app',
+        data:{
+
+        },
+        // 语法糖2
+        components:{
+            'cpd2':{
+                template: `
+            <div>
+                <h2>I am title2</h2>
+                <p>description2</p>
+                <p>articles2</p>
+            </div>
+        `
+            }
+        }
+    })
+</script>
+</body>
+</html>
