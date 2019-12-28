@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <cpd :cmovies="movies" :cname="name"></cpd>
+</div>
+<template id="cpd">
+    <div>
+        <h3>{{cname}}</h3>
+        <ul>
+            <li v-for="m in cmovies">{{m}}</li>
+        </ul>
+    </div>
+</template>
+<script src="../vue.min.js"></script>
+<script type="text/javascript">
+    const cpd = {
+        template: '#cpd',
+        props:{
+            cmovies:Array,
+            cname:{
+                type: String,
+                default: 'zhangsan',
+                required: true
+            }
+        }
+    }
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            movies:['绿皮书', '奥特曼', '猫和老鼠', '倚天屠龙记', '华农兄弟'],
+            name: "youeryuan"
+        },
+        components:{
+            cpd
+        }
+    })
+</script>
+</body>
+</html>
