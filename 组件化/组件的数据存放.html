@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <cpd></cpd>
+    <cpd></cpd>
+</div>
+<template id="cpd">
+    <div>
+        <h3>我是{{title}}</h3>
+        <p>{{desc}}</p>
+        <p>我是内容</p>
+    </div>
+</template>
+<script src="../vue.min.js"></script>
+<script>
+    // 注册组件
+    Vue.component('cpd', {
+        template: '#cpd',
+        data(){
+            return {
+                title: '有没有人曾告诉你',
+                desc:  '有没有人曾在你日记里哭泣',
+            }
+        }
+    })
+    const vm = new Vue({
+        el: '#app',
+        data:{
+
+        }
+    })
+</script>
+</body>
+</html>
