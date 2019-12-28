@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <cpd></cpd>
+    <cpd></cpd>
+</div>
+<template id="cpd">
+    <div>
+        <h3>我是title</h3>
+        <p>我是article</p>
+        <p>我是内容</p>
+    </div>
+</template>
+<script src="../vue.min.js"></script>
+<script>
+    // 注册组件
+    const vm = new Vue({
+        el: '#app',
+        data:{
+
+        },
+        components:{
+            'cpd': {
+                'template': '#cpd'
+            }
+        }
+    })
+</script>
+</body>
+</html>
