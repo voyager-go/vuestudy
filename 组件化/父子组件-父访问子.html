@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<cpd></cpd>
+<cpd ref="two"></cpd>
+    <button @click="showName">click</button>
+</div>
+<template id="cpd">
+<h3>{{name}}</h3>
+</template>
+<script src="../vue.min.js"></script>
+<script type="text/javascript">
+    const vm = new Vue ({
+        el: '#app',
+        data: {
+
+        },
+        methods:{
+            showName(){
+                console.log(this.$refs.two.name)
+            }
+        },
+        components: {
+            cpd: {
+                template: '#cpd',
+                data(){
+                    return {
+                        name: '幼儿猿'
+                    }
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
