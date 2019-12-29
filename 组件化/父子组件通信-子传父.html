@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <cpd @menu_click="cpd_click"></cpd>
+</div>
+<template id="cpd">
+    <ul>
+        <li v-for="item in categories" @click="itemClick(item)"><a href="javascript:;">{{item.title}}</a></li>
+    </ul>
+</template>
+<script src="../vue.min.js"></script>
+<script type="text/javascript">
+    const cpd = Vue.component('cpd', {
+        template: '#cpd',
+        data(){
+            return {
+                categories: [
+                    {id: 1, title: '厨房用品'},
+                    {id: 2, title: '数码家具'},
+                    {id: 3, title: '棉衣棉裤'},
+                    {id: 4, title: '洗漱用品'},
+                ]
+            }
+        },
+        methods:{
+            itemClick(item){
+                // 此处驼峰式写法会报错 请注意
+                this.$emit('menu_click', item)
+            }
+        }
+    })
+const vm = new Vue({
+   el: '#app',
+   data: {
+
+   },
+    components:{
+        cpd
+    },
+    methods: {
+        cpd_click(item){
+           console.log(item);
+       }
+    }
+});
+</script>
+</body>
+</html>
